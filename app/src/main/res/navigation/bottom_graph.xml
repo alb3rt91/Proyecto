@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_graph"
+    app:startDestination="@id/bottom1Fragment">
+    <fragment
+        android:id="@+id/bottom1Fragment"
+        android:name="com.example.proyecto.Bottom1Fragment"
+        android:label="fragment_bottom1"
+        tools:layout="@layout/fragment_bottom1" >
+        <action
+            android:id="@+id/action_bottom1Fragment_to_formas"
+            app:destination="@id/formas" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom2Fragment"
+        android:name="com.example.proyecto.Bottom2Fragment"
+        android:label="fragment_bottom2"
+        tools:layout="@layout/fragment_bottom2" />
+    <fragment
+        android:id="@+id/bottom3Fragment"
+        android:name="com.example.proyecto.Bottom3Fragment"
+        android:label="fragment_bottom3"
+        tools:layout="@layout/fragment_bottom3" />
+    <fragment
+        android:id="@+id/formas"
+        android:name="com.example.proyecto.Formas"
+        android:label="fragment_formas"
+        tools:layout="@layout/fragment_formas" >
+        <action
+            android:id="@+id/action_formas_to_rectangular2"
+            app:destination="@id/rectangular2" />
+        <action
+            android:id="@+id/action_formas_to_rectangular_romana"
+            app:destination="@id/rectangular_romana" />
+        <action
+            android:id="@+id/action_formas_to_rectangular_rectangular"
+            app:destination="@id/rectangular_rectangular" />
+    </fragment>
+    <fragment
+        android:id="@+id/rectangular2"
+        android:name="com.example.proyecto.rectangular"
+        android:label="fragment_rectangular"
+        tools:layout="@layout/fragment_rectangular" >
+        <action
+            android:id="@+id/action_rectangular2_to_bottom1Fragment"
+            app:destination="@id/bottom1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rectangular_romana"
+        android:name="com.example.proyecto.rectangular_romana"
+        android:label="fragment_rectangular_romana"
+        tools:layout="@layout/fragment_rectangular_romana" >
+        <action
+            android:id="@+id/action_rectangular_romana_to_bottom1Fragment"
+            app:destination="@id/bottom1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rectangular_rectangular"
+        android:name="com.example.proyecto.rectangular_rectangular"
+        android:label="fragment_rectangular_rectangular"
+        tools:layout="@layout/fragment_rectangular_rectangular" >
+        <action
+            android:id="@+id/action_rectangular_rectangular_to_bottom1Fragment"
+            app:destination="@id/bottom1Fragment" />
+    </fragment>
+</navigation>
